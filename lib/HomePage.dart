@@ -13,11 +13,52 @@ class _HomePageState extends State<HomePage> {
         title: Text("Home Screen"),
       ),
       body: Container(
-        child: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (context, index) => ListTile(
-            title: Text("${index + 1} hello flutter"),
-          ),
+        child: Column(
+          children: [
+            TextFormField(
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+              decoration: InputDecoration(
+                hintText: 'Username',
+              ),
+            ),
+            TextFormField(
+              obscureText: true,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+              decoration: InputDecoration(
+                hintText: 'password',
+              ),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.brown,
+                onPrimary: Colors.white,
+              ),
+              onPressed: () {},
+              child: Text("Submit"),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text("hello"),
+              style: TextButton.styleFrom(
+                primary: Colors.green,
+                
+              ),
+            ),
+            TextButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.person),
+              label: Text("person"),
+              style: TextButton.styleFrom(
+                primary: Colors.brown,
+              ),
+            ),
+          ],
         ),
       ),
     );
