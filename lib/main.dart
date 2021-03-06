@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       theme: ThemeData(
-        fontFamily: 'arial',
+   
         primaryColor: Colors.red,
-        brightness: Brightness.dark,
+       
       ),
       home: HomePage(),
     );
