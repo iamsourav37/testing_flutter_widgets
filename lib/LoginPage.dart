@@ -79,7 +79,9 @@ class _LoginPageState extends State<LoginPage> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  print("login functionality");
+                },
                 child: Text("Login"),
               ),
             ),

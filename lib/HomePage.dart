@@ -13,70 +13,81 @@ class _HomePageState extends State<HomePage> {
         title: Text("Home Screen"),
       ),
       body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              TextFormField(
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-                decoration: InputDecoration(
-                  hintText: 'Username',
-                ),
+        child: ListView(
+          children: [
+            Container(
+              padding: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                color: Colors.yellowAccent,
               ),
-              TextFormField(
-                obscureText: true,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-                decoration: InputDecoration(
-                  hintText: 'password',
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.all(20.0),
-                width: 300.0,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 10.0),
-                    primary: Colors.lightBlueAccent,
-                    onPrimary: Colors.black87,
-                    textStyle: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    shadowColor: Colors.yellow,
-                    elevation: 4.5,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    
+              child: Center(
+                child: Text(
+                  "Welcome to Flutter app".toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
                   ),
-                  onPressed: () {
-                    print("button pressed");
-                  },
-                  child: Text("Submit"),
                 ),
               ),
-              TextButton(
-                onPressed: () {},
-                child: Text("hello"),
-                style: TextButton.styleFrom(
-                  primary: Colors.green,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: FlutterLogo(
+                  size: 120,
                 ),
               ),
-              TextButton.icon(
-                onPressed: () {},
-                icon: Icon(Icons.person),
-                label: Text("person"),
-                style: TextButton.styleFrom(
-                  primary: Colors.brown,
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Container(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/signup');
+                      },
+                      child: Text(
+                        "Go to Signup Screen",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.all(10.0),
+                        primary: Colors.blueAccent,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 9.0,
+                  ),
+                  Container(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+                      child: Text(
+                        "Go to Login Screen",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.all(10.0),
+                        primary: Colors.blueAccent,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
