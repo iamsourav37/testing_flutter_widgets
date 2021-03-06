@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -23,12 +24,19 @@ class _HomePageState extends State<HomePage> {
               child: Center(
                 child: Text(
                   "Welcome to Flutter app".toUpperCase(),
-                  style: TextStyle(
+                  style: GoogleFonts.lato(
+                    fontStyle: FontStyle.normal,
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.green,
                   ),
                 ),
+              ),
+            ),
+            Container(
+              child: Text(
+                "HELLO WORLD",
+                style: GoogleFonts.raleway(),
               ),
             ),
             SizedBox(
