@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:testing/HomePage.dart';
 import 'package:testing/LoginPage.dart';
 import 'package:testing/SignupPage.dart';
+import 'Profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,12 +19,13 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       theme: ThemeData(
-        primaryColor: Colors.red,
+        primaryColor: Colors.black,
       ),
       routes: {
         '/': (context) => HomePage(),
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignupPage(),
+        '/profile' : (context) => ProfileScreen(),
       },
       initialRoute: '/',
     );

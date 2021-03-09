@@ -33,12 +33,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Container(
-              child: Text(
-                "HELLO WORLD",
-                style: GoogleFonts.raleway(),
-              ),
-            ),
+            
             SizedBox(
               height: 30,
             ),
