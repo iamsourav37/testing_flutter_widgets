@@ -14,18 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Testing',
-      themeMode: ThemeMode.light,
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
       theme: ThemeData(
-        primaryColor: Colors.black,
+        primaryColor: Colors.orange,
       ),
       routes: {
         '/': (context) => HomePage(),
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignupPage(),
-        '/profile' : (context) => ProfileScreen(),
+        '/profile': (context) => ProfileScreen(),
       },
       initialRoute: '/',
     );

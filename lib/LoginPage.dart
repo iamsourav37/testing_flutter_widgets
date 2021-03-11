@@ -11,6 +11,7 @@ class _LoginPageState extends State<LoginPage> {
   void goToProfile() {
     if (formKey.currentState.validate()) {
       print("go to profile screen");
+      Navigator.pushNamed(context, '/profile');
     }
   }
 
