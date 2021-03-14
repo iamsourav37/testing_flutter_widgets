@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'PageViewScreen.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -51,6 +52,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Colors.orange,
               ),
               title: Text("Story"),
+            ),
+            ListTile(
+              onTap: () {
+                print("Page View");
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => PageViewScreen()));
+              },
+              leading: Icon(
+                CupertinoIcons.book,
+                color: Colors.orange,
+              ),
+              title: Text("Page View"),
             ),
             Divider(),
             ListTile(
